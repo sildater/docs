@@ -8,20 +8,20 @@ main:
     url: /
     weight: 10
   - name: Match
-    url: docs/
+    url: match/
     weight: 20
   - name: Partitura
     url : https://partitura.readthedocs.io/en/latest/
     weight: 30
   - name: MatchMaker
-    url: https://partitura.readthedocs.io/en/latest/
+    url: nopage/
     weight: 40
   - name: Struttura
-    url: https://partitura.readthedocs.io/en/latest/
+    url: nopage/
     weight: 50
   - name: BasisMixer
-    url: https://partitura.readthedocs.io/en/latest/
+    url: nopage/
     weight: 60
   - name: Accompanion
-    url: https://partitura.readthedocs.io/en/latest/
+    url: nopage/
     weight: 70

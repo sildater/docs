@@ -1,10 +1,8 @@
 ---
 # Title, summary, and page position.
-linktitle: Partitura
-summary: Learn how to use Partitura to easily parse and create match files. See now the software documentation, and tutorials.
-weight: 1
-icon: book-reader
-icon_pack: fas
+linktitle: Usage
+summary: Learn how to use the match file format.
+weight: 2
 
 # Page metadata.
 title: Partitura
@@ -14,12 +12,6 @@ type: book  # Do not modify.
 
 Introduction
 ============
-
-
-
-asdfasdfasdfyagsdfasdgfasdfasui8ydfb
-
-
 
 The principal aim of the `partitura` package is to handle richly structured
 musical information as conveyed by modern staff music notation. It provides

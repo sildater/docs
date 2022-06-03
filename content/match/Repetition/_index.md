@@ -2,9 +2,7 @@
 # Title, summary, and page position.
 linktitle: Repetition Handling
 summary: Learn how Partitura and the Match Format handles repetitions during the performance's score unfolding.
-weight: 3
-icon: book
-icon_pack: fas
+weight: 4
 
 # Page metadata.
 title: Repetition Handling

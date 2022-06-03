@@ -2,32 +2,25 @@
 widget: hero
 headless: true
 weight: 10
-title: Official Match Documentation
-hero_media: match_logo.svg
+title: CPJKU Ecosystem Documentation
+hero_media: cp_color_text_en.svg
 design:
   background:
-    gradient_start: 'rgba(200,0,50,.8)'
-    gradient_end: '#2b94c3'
+    gradient_start: '#2b94c3'
+    gradient_end: 'rgba(200,0,50,.8)'
     text_color_light: true
 cta:
-  url: docs/
+  url: https://github.com/CPJKU
   label: 
-  icon_pack: fas
-  icon: download
+  icon_pack: fab
+  icon: github
 cta_alt:
-  url: docs/
+  url: match/
   label: View Documentation
-cta_note:
-  label: >-
-    <span class="js-github-release" data-repo="wowchemy/wowchemy-hugo-modules">
-      Show your product version here:<!-- Automatically filled based on data-repo value -->
-    </span>
 ---
 
+This is the official site for the CPJKU Ecosystem Utils Documentation. 
 
-This is the official site for the `.match` formal documentation. 
 
-The `.match` format is a syntax for score to performance alignment, currently at the version 0.6
 
-<a class="github-button" href="https://github.com/wowchemy/wowchemy-hugo-modules" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Wowchemy Website Builder for Hugo">Star Wowchemy Website Builder for Hugo</a><br><a class="github-button" href="https://github.com/wowchemy/starter-hugo-project-documentation" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star the Project Docs template">Star the Project Docs template</a><script async defer src="https://buttons.github.io/buttons.js"></script>
 

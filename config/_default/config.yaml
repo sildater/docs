@@ -1,9 +1,9 @@
-# Configuration of Hugo
+# Configuration of Hugo The Page is Not Found
 # Guide: https://wowchemy.com/docs/getting-started/
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: 'Match Documentation' # Website name
+title: 'CPJKU Documentation' # Website name
 baseurl: '' # Website URL
 copyright: '' # Footer text, e.g. '© {year} Me'
 

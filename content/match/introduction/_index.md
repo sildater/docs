@@ -1,10 +1,8 @@
 ---
 # Title, summary, and page position.
-linktitle: Match File Format
-summary: Introduction, documentation and contribution guidelines for the Match File Format.
+linktitle: Introduction
+summary: Introduction
 weight: 1
-icon: book
-icon_pack: fas
 
 # Page metadata.
 title: Match File Format
