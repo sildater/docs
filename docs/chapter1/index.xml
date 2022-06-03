@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Match File Format | Match Documentation</title><link>/docs/chapter1/</link><atom:link href="/docs/chapter1/index.xml" rel="self" type="application/rss+xml"/><description>Match File Format</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate><image><url>/media/icon_hu6d1ba421daacf30ae3c4e159e6645876_317832_512x512_fill_lanczos_center_2.png</url><title>Match File Format</title><link>/docs/chapter1/</link></image><item><title>Specifications</title><link>/docs/chapter1/specifications/</link><pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate><guid>/docs/chapter1/specifications/</guid><description>&lt;h2 id="global-information-lines">Global Information Lines&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>Syntax&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Value&lt;/strong> &lt;strong>type&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Mandatory&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Description&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>info(matchFileVersion,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Matchfile version (current 1.0.0 previous 5.0, see version changes)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(piece,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Piece name or opus number&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(scoreFileName,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Corresponding score file name (e.g. musicxml)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(scoreFilePath,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Corresponding score file path&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(midiFileName,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Corresponding MIDIfile name&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(midiFilePath,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Corresponding MIDI file path&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(audioFileName,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Corresponding audio file name&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(audioFilePath,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Corresponding audio file path&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(audioFirstNote,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Time of first note onset in audio file&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(audioLastNote,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Time of last note onset in audio file&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(performer,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Performer name&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(composer,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Composer name&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(midiClockUnits,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>MIDI Clock Units (MIDI parts per quarter)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(midiClockRate,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>MIDI Clock Rate (Microseconds per quarter)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(keySignature,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>[string]&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>deprecated&lt;/strong> &lt;strong>(first) Key signature (see score properties)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(timeSignature,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>[integer / integer]&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>deprecated&lt;/strong> &lt;strong>(first) Time signature (see score properties)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(beatSubdivision,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>[int]&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>deprecated&lt;/strong> &lt;strong>Beat subdivision (see score properties)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(tempoIndication,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>[string]&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>deprecated&lt;/strong> &lt;strong>Tempo directions (see score properties)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(approximateTempo,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Approximate tempo&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>info(subtitle,&lt;strong>&lt;strong>value&lt;/strong>&lt;/strong>).&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Subtitles&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="score-property-lines">Score Property Lines&lt;/h2>
+&lt;h3 id="time-signature">Time Signature:&lt;/h3>
+&lt;p>&lt;code>scoreprop(timeSignature,TimeSigValue,Measure:Beat,Offset,Duration,OnsetInBeats).&lt;/code>&lt;/p>
+&lt;h3 id="key-signature">Key Signature:&lt;/h3>
+&lt;p>&lt;code>scoreprop(keySignature,KeySigValue,Measure:Beat,Offset,Duration,OnsetInBeats).&lt;/code>&lt;/p>
+&lt;h3 id="beat-subdivision">Beat Subdivision:&lt;/h3>
+&lt;p>&lt;code>scoreprop(beatSubDivision,BeatSubValue,Measure:Beat,Offset,Duration,OnsetInBeats).&lt;/code>&lt;/p>
+&lt;h3 id="directions">Directions:&lt;/h3>
+&lt;p>&lt;code>scoreprop(directions,DirectionsValue,Measure:Beat,Offset,Duration,OnsetInBeats).&lt;/code>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>Value name&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Value type&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Description&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Measure&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>measure number (starting at 1, 0 for anacrusis) of the score position&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Beat&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer beat number (starting at 1) of the score position&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Offset&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Integer / integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>offset of the score position****from beat position (in symbolic duration; fraction of whole notes)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>OnsetInBeats&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>score position in contiguous beats (beat 0 = start of measure 1, beat unit = time signature denominator)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>TimeSigValue&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer / integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Time signature&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>KeySigValue&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;strong>Key signature&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>BeatSubValue&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>?&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>DirectionsValue&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>[string]&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>A list of performance directions&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="section-lines">Section Lines&lt;/h2>
+&lt;h3 id="section-in-the-score-with-reference-positions-in-the-underlying-non-unfolded-score">Section in the score with reference positions in the underlying (non-unfolded) score:&lt;/h3>
+&lt;p>&lt;code>section(StartInBeatsUnfolded,EndInBeatsUnfolded, StartInBeatsOriginal, EndInBeatsOriginal, RepeatEndType).&lt;/code>&lt;/p>
+&lt;p>Possible values:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>Value name&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Value type&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Description&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>StartInBeatsUnfolded&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Start of the segment in beats in unfolded score time&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>EndInBeatsUnfolded&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>End of the segment in beats in the unfolded score time&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>StartInBeatsOriginal&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Start of the segment in beats in the original score&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>EndInBeatsOriginal&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>End of the segment in beats in the original score&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>RepeatEndType&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>[string]&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>optional: list of type of the end of segment, e.g. “fine” “repeat left”, “volta end”, etc.&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="match-lines">Match Lines&lt;/h2>
+&lt;h3 id="beat-downbeat-or-any-score-position-annotation-between-performance-and-score">Beat, downbeat, or any score position annotation between performance and score:&lt;/h3>
+&lt;p>&lt;code>stime(Measure:Beat,Offset,OnsetInBeats,AnnotationType)-ptime(Onsets).&lt;/code>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>Value name&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Value type&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Description&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Measure&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>measure number (starting at 1, 0 for anacrusis) of the score position&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Beat&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer beat number (starting at 1) of the score position&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Offset&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Integer / integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>offset of the score position****from beat position (in symbolic duration; fraction of whole notes)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>OnsetInBeats&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>score position in contiguous beats (beat 0 = start of measure 1, beat unit = time signature denominator)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>AnnotationType&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>[string]&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Optional: list of types of annotation, e.g. “beat”, “measure”, or “downbeat”&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Onsets&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>[integer]&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Array of at least one time in parts/ticks of the performance annotation corresponding to the score position&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>Notes in the performance:&lt;/strong>&lt;/p>
+&lt;p>&lt;code>note(ID,MIDIpitch,Onset,Offset,Velocity).&lt;/code>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>Value name&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Value type&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Description&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>ID&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Note identifier&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>MIDIpitch&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Pitch 0-127&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Onset&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Time in parts/ticks of the note on message&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Offset&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Time in parts/ticks of the note off message&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>adjustedOffset&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>deprecated&lt;/strong> &lt;strong>Sounding note off when adjusted by sustain pedal information (see pedal lines)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Velocity&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Note on velocity 0-127&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="notes-in-the-score">Notes in the score&lt;/h3>
+&lt;p>&lt;code>snote(Anchor,[NoteName,Modifier],Octave,Measure:Beat,Offset,Duration,OnsetInBeats,OffsetInBeats,ScoreAttributesList).&lt;/code>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>Value name&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Value type&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Description&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Anchor&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Note identifier (we should specifically reserve “-&lt;number>” at the end of the anchor as “repetition”)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>NoteName&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Pitch class name in [C, D, E, F, G, A, B]&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Modifier&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>pitch modifier in [“”, n, b, #, bb, x]&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Octave&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>octave number (scientific notation, middle C is in octave 4)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Measure&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>measure number (starting at 1, 0 for anacrusis)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Beat&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer beat number of note onset (starting at 1)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Offset&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer / integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>offset from beat position (in symbolic duration; fraction of whole notes)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>OnsetInBeats&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>onset position in contiguous beats (beat 0 = start of measure 1, beat unit = time signature denominator)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>DurationInBeats&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>duration in beats&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>ScoreAttributesList&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>[string]&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>note attributes (“grace”, “appoggiatura”, etc.)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="score-note-matched-to-a-performed-note">score note matched to a performed note:&lt;/h3>
+&lt;p>&lt;code>snote( _ , … , _ )-note( _ , … , _ ).&lt;/code>&lt;/p>
+&lt;p>&lt;code>snote(Anchor,NoteName,Modifier],Octave,Measure:Beat,Offset,Duration,OnsetInBeats,OffsetInBeats,ScoreAttributesList)-note(ID,MIDIpitch,Onset,Offset,Velocity).&lt;/code>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>Value name&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Value type&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Description&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Anchor&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Note identifier (we should specifically reserve “-&lt;number>” at the end of the anchor as “repetition”)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>NoteName&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Pitch class name in [C, D, E, F, G, A, B]&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Modifier&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>string&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>pitch modifier in [“”, n, b, #, bb, x]&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Octave&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>octave number (scientific notation, middle C is in octave 4)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Measure&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>measure number (starting at 1, 0 for anacrusis)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Beat&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer beat number of note onset (starting at 1)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Offset&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer / integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>offset from beat position (in symbolic duration; fraction of whole notes)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>OnsetInBeats&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>onset position in contiguous beats (beat 0 = start of measure 1, beat unit = time signature denominator)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>DurationInBeats&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>float&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>duration in beats&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>ScoreAttributesList&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>[string]&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>note attributes (“grace”, “appoggiatura”, etc.)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>ID&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Note identifier&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>MIDIpitch&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Pitch 0-127&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Onset&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Time in parts/ticks of the note on message&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Offset&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Time in parts/ticks of the note off message&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>adjustedOffset&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>deprecated&lt;/strong> &lt;strong>Sounding note off when adjusted by sustain pedal information (see pedal lines)&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Velocity&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Note on velocity 0-127&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="omitted-score-note">Omitted score note&lt;/h3>
+&lt;p>Score notes that were omitted in the performance:&lt;/p>
+&lt;p>&lt;code>snote( _ , … , _ )-deletion.&lt;/code>&lt;/p>
+&lt;h3 id="inserted-performed-note">Inserted Performed note:&lt;/h3>
+&lt;p>Performed notes that are not found in the score:&lt;/p>
+&lt;p>&lt;code>insertion-note( _ , … , _ ).&lt;/code>&lt;/p>
+&lt;h2 id="pedal-lines">Pedal Lines&lt;/h2>
+&lt;p>Pedal lines represent MIDI cc 64 (sustain pedal) messages in the performance MIDI file.&lt;/p>
+&lt;p>&lt;strong>Pedal line:&lt;/strong>&lt;/p>
+&lt;p>&lt;code>sustain(Time,Value).&lt;/code>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>Value name&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Value type&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>Description&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Time&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Time in parts/ticks of the pedal message&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Value&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>integer&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>Sustain pedal value 0-127&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Reading List</title><link>/docs/chapter1/reading-list/</link><pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate><guid>/docs/chapter1/reading-list/</guid><description>&lt;p>A recommended reading list for the course.&lt;/p>
+&lt;h2 id="books">Books&lt;/h2>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p>
+&lt;p>Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p>
+&lt;p>Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p>
+&lt;p>Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p>
+&lt;p>Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p>
+&lt;h2 id="videos">Videos&lt;/h2>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p>
+&lt;p>Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p>
+&lt;p>Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p>
+&lt;p>Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p>
+&lt;p>Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p></description></item><item><title>Takeaways</title><link>/docs/chapter1/takeaways/</link><pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate><guid>/docs/chapter1/takeaways/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p>
+&lt;p>Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p>
+&lt;p>Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p>
+&lt;p>Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p>
+&lt;p>Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p></description></item></channel></rss>
